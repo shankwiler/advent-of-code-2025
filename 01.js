@@ -1,3 +1,18 @@
+/*
+This puzzle was a good reminder that in Javascript `%` is a "remainder" operator,
+not a modulo operator like it is in Python.
+
+For part two, the solution I wrote was a bit complicated. Most of the solutions posted
+on reddit seem to loop over the full number of ticks and count the number of
+times zero is passed. This solution will count the following without looping:
+
+- +1 if the new position is at 0
+- +X for the number of full 100-rotations done
+- +1 if 0 was passed even though a full rotation was not completed
+
+That was a bit complicated because of some edge cases and special handling of L and R.
+*/
+
 // part one
 (() => {
   const lines = document
