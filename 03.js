@@ -7,6 +7,14 @@ But in reality the runtime isn't bad: O((size of row) * (number of allowed digit
 We're answering this question for each position in the row: what's the best possible
 number I could construct with myself and the digits before me in the row, given some
 number of allowed digits from 1-12.
+
+Edit: this solution is really nice:
+https://github.com/sunderee/aoc-ts/blob/master/src/solutions/2025/day03.ts.
+
+It uses a stack. I think it's an O(size of row) solution, because each digit in the
+row could be pushed to the stack once, and popped from the stack once. You might have
+to pop many in a row if you get bad luck with something like 123456789, but still, each
+digit in the row could only be popped once.
 */
 
 // part one
