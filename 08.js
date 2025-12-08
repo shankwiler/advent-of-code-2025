@@ -1,6 +1,6 @@
 /*
 Part one has an O(N^2), where the runtime is dominated by the O(N^2)** (edit below) distance construction.
-Then there's an O(N) DFS.
+Then there's an O(N^2) DFS.
 
 I'm not sure if you could do better -- maybe there's a way you could sort the coords in 3d
 space and pick off the first 1000, but I'm not sure about that.
