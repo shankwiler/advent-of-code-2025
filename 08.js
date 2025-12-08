@@ -1,5 +1,5 @@
 /*
-Part one has an O(N^2), where the runtime is dominated by the O(N^2) distance construction.
+Part one has an O(N^2), where the runtime is dominated by the O(N^2)** (edit below) distance construction.
 Then there's an O(N) DFS.
 
 I'm not sure if you could do better -- maybe there's a way you could sort the coords in 3d
@@ -7,6 +7,9 @@ space and pick off the first 1000, but I'm not sure about that.
 
 Part two should be the same -- the union find data structure should give O(1) amoritized
 lookups. But I wrote this with no path compression out of laziness -- so it's a bit slow.
+
+Edit: actually, after looking at solutions from others, I believe it's actually O(N^2 log(N^2)
+because we have to sort the N^2 distances.
 */
 
 // part one
