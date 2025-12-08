@@ -8,8 +8,8 @@ space and pick off the first 1000, but I'm not sure about that.
 Part two should be the same -- the union find data structure should give O(1) amoritized
 lookups. But I wrote this with no path compression out of laziness -- so it's a bit slow.
 
-Edit: actually, after looking at solutions from others, I believe it's actually O(N^2 log(N^2)
-because we have to sort the N^2 distances.
+Edit: Actually, after thinking about this a bit more and looking at solutions from others,
+I believe it's actually O(N^2 log(N^2)) because we have to sort the N^2 distances.
 */
 
 // part one
@@ -34,7 +34,7 @@ because we have to sort the N^2 distances.
         Math.pow(coords[j][0] - coords[i][0], 2) +
           Math.pow(coords[j][1] - coords[i][1], 2) +
           Math.pow(coords[j][2] - coords[i][2], 2),
-        2
+        0.5
       );
       distances.push([distance, i, j]);
     }
@@ -104,7 +104,7 @@ because we have to sort the N^2 distances.
         Math.pow(coords[j][0] - coords[i][0], 2) +
           Math.pow(coords[j][1] - coords[i][1], 2) +
           Math.pow(coords[j][2] - coords[i][2], 2),
-        2
+        0.5
       );
       distances.push([distance, i, j]);
     }
